@@ -3,7 +3,7 @@
     hosts: localhost
     gather_facts: yes
     vars:
-      custom_heading: "Welcome To NCPl AWS Training - Testing AWS Auto Scaling Group"
+      custom_heading: "Welcome To NCPL AWS Training - Testing AWS Auto Scaling Group"
       todays_date: "{{ ansible_facts['date_time']['date'] }}"
       host_name: "{{ ansible_facts['hostname'] }}"
       fqdn_name: "{{ ansible_facts['fqdn'] }}"
