@@ -7,7 +7,7 @@ apt install ansible -y
 apt install nginx -y
 apt install git -y
 apt install stress -y
-git clone https://github.com/bkrraj/ansibletemplatetesting.git  /myrepo
+git clone -b Azure-branch https://github.com/bkrraj/ansibletemplatetesting.git  /myrepo
 ######USE aws-autoscaling branch for testing aws autoscaling##########################
 ######GIVE ONLY ABOVE IN THE USER DATA FOR AMI IMAGE FOR AWS AUTOSCALING##########
 #
@@ -19,3 +19,8 @@ ansible-playbook /myrepo/playbook.yaml
 #cloud-config
 runcmd:
   - ansible-playbook /myrepo/playbook.yaml
+
+
+runcmd:
+  - git clone --branch Azure-branch https://github.com/bkrraj/ansibletemplatetesting.git  /myrepo
+  - cd / && ansible-playbook playbook.yml
