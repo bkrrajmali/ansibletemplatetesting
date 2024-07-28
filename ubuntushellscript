@@ -13,3 +13,9 @@ git clone https://github.com/bkrraj/ansibletemplatetesting.git  /myrepo
 #
 #####GIVE BELOW IN THE LAUNCH CONFIG USERDATA#####################################
 ansible-playbook /myrepo/playbook.yaml
+
+#For Azure
+
+#cloud-config
+runcmd:
+  - ansible-playbook /myrepo/playbook.yaml
